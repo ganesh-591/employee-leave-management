@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaveFlow - Employee Leave Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">LeaveFlow</h2>
+
+            <nav>
+                <a href="#overview">Dashboard</a>
+                <a href="#leave-balance">My Leave Balance</a>
+                <a href="#leave-requests">Leave Requests</a>
+                <a href="#apply-leave">Apply for Leave</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Employee Workspace</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">EMPLOYEE WORKSPACE</p>
+                    <h1>Leave Management</h1>
+                </div>
+
+                <div class="profile">
+                    <span class="avatar">G</span>
+                    <span>My Account</span>
+                </div>
+            </header>
+
+            <!-- Welcome Section -->
+            <section id="overview" class="welcome">
+                <h2>Welcome back!</h2>
+                <p>Manage your leave balance and keep track of your time off.</p>
+            </section>
+
+            <!-- Leave Balance -->
+            <section id="leave-balance" class="leave-stats">
+                <article class="leave-card">
+                    <p>Annual Leave</p>
+                    <h2>12 Days</h2>
+                    <span>Available balance</span>
+                </article>
+
+                <article class="leave-card">
+                    <p>Sick Leave</p>
+                    <h2>6 Days</h2>
+                    <span>Available balance</span>
+                </article>
+
+                <article class="leave-card">
+                    <p>Casual Leave</p>
+                    <h2>4 Days</h2>
+                    <span>Available balance</span>
+                </article>
+            </section>
+
+            <!-- Leave Requests -->
+            <section id="leave-requests" class="panel">
+                <div class="section-heading">
+                    <div>
+                        <h2>Recent Leave Requests</h2>
+                        <p>Review your submitted leave requests.</p>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Leave Type</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Days</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Annual Leave</td>
+                                <td>05 Nov 2026</td>
+                                <td>07 Nov 2026</td>
+                                <td>3</td>
+                                <td><span class="status approved">Approved</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Sick Leave</td>
+                                <td>12 Nov 2026</td>
+                                <td>12 Nov 2026</td>
+                                <td>1</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Casual Leave</td>
+                                <td>18 Nov 2026</td>
+                                <td>19 Nov 2026</td>
+                                <td>2</td>
+                                <td><span class="status rejected">Rejected</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Apply for Leave -->
+            <section id="apply-leave" class="panel">
+                <h2>Apply for Leave</h2>
+                <p class="section-description">
+                    Fill in the details to submit a leave request.
+                </p>
+
+                <form class="leave-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="leave-type">Leave Type</label>
+                            <select id="leave-type" required>
+                                <option value="">Select leave type</option>
+                                <option value="annual">Annual Leave</option>
+                                <option value="sick">Sick Leave</option>
+                                <option value="casual">Casual Leave</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="end-date">End Date</label>
+                            <input type="date" id="end-date" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="reason">Reason for Leave</label>
+                            <textarea id="reason" rows="4"
+                                placeholder="Enter your reason..."
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit">Submit Request</button>
+                </form>
+            </section>
+
+            <footer>
+                <p>LeaveFlow · Plan your time off with confidence.</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
